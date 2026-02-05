@@ -17,6 +17,7 @@ import {
   RefreshCcw,
   AlertTriangle,
 } from "lucide-react";
+import "./Assignment2.css";
 
 const API_BASE_URL = "https://api.open-meteo.com/v1/forecast";
 const BERLIN = { lat: 52.52, lon: 13.41, name: "Berlin" };
@@ -44,7 +45,7 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-function App() {
+function Assignment2() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -121,7 +122,7 @@ function App() {
 
   return (
     <div className="container">
-      <header className="header">
+      <header className="header" style={{ paddingTop: '2rem' }}>
         <h1>Global Weather Analytics</h1>
         <p>Real-time temperature comparison between London, Berlin and Taipei</p>
       </header>
@@ -199,7 +200,7 @@ function App() {
               marginBottom: "1.5rem",
             }}
           >
-            <h2 style={{ fontSize: "1.5rem" }}>
+            <h2 style={{ fontSize: "1.5rem", color: 'white' }}>
               Temperature Trends (Next 7 Days)
             </h2>
             <div className="legend-container" style={{ margin: 0 }}>
@@ -229,7 +230,7 @@ function App() {
                 style={{
                   background: 'none', 
                   border: 'none', 
-                  color: 'var(--text-secondary)', 
+                  color: 'white', 
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
@@ -310,7 +311,7 @@ function App() {
         style={{
           marginTop: "4rem",
           textAlign: "center",
-          color: "#64748b",
+          color: "#94a3b8",
           fontSize: "0.875rem",
           paddingBottom: "2rem",
         }}
@@ -324,4 +325,4 @@ function App() {
   );
 }
 
-export default App;
+export default Assignment2;

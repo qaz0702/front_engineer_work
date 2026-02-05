@@ -9,6 +9,7 @@ import {
   createTheme
 } from "@mui/material";
 import AppRedux from "./AppRedux";
+import "./Assignment1.css";
 
 // Create a custom theme
 const theme = createTheme({
@@ -22,7 +23,7 @@ const theme = createTheme({
   },
 });
 
-function App() {
+function Assignment1() {
   const [view, setView] = React.useState("useState"); // "useState" or "redux"
   
   // Requirement 1 & 2: use useState to handle the count value
@@ -67,7 +68,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          minHeight: "100vh",
+          minHeight: "calc(100vh - 64px)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -77,7 +78,7 @@ function App() {
         }}
       >
         <Typography variant="h4" gutterBottom sx={{ color: '#1976d2', fontWeight: 'bold', mb: 3 }}>
-          前端面試作業
+          前端面試作業一
         </Typography>
 
         <Paper
@@ -170,4 +171,4 @@ function App() {
   );
 }
 
-export default App;
+export default Assignment1;

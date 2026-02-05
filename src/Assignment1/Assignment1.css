@@ -1,0 +1,8 @@
+.assignment1-root {
+  min-height: calc(100vh - 64px);
+  background-color: #fafafa;
+}
+
+.assignment1-root * {
+  box-sizing: border-box;
+}
